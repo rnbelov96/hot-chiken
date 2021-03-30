@@ -1,0 +1,117 @@
+.adv {
+  position: relative;
+  overflow: hidden;
+
+  padding-bottom: 220px;
+  min-height: 964px;
+
+  background-color: black;
+
+  @media (max-width: 767px) {
+    padding-bottom: 75px;
+    min-height: 750px;
+  }
+}
+
+.adv__bg {
+  position: absolute;
+  left: 50%;
+  transform: skewY(-8deg) translateX(-50%);
+  height: 681px;
+  width: 1920px;
+  background: url('/src/img/bgs/adv-chiken.png'),
+    radial-gradient(27.5% 53.3% at 58.85% 50.21%, #da381e 0%, #7a1100 100%);
+  background-repeat: no-repeat;
+  background-position: 84% 30%, 0px 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 1200px) {
+    background-position: 100% 30%, 0px 0px;
+  }
+
+  @media (max-width: 767px) {
+    background: radial-gradient(
+      27.5% 53.3% at 58.85% 50.21%,
+      #da381e 0%,
+      #7a1100 100%
+    );
+    background-position: 0px 0px;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+}
+
+.adv__title {
+  margin-bottom: 10px;
+  margin-top: 131px;
+
+  @include h1;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    margin-top: 70px;
+    font-size: 75px;
+  }
+
+  @media (max-width: 575px) {
+    margin-top: 45px;
+    font-size: 40px;
+  }
+}
+
+.adv__subtitle {
+  width: 100%;
+  max-width: 388px;
+  margin-bottom: 45px;
+  @include h3;
+}
+
+.adv__text-box {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 490px;
+
+  @include h4;
+  color: $yellow;
+}
+
+.adv__list {
+  width: 100%;
+  max-width: 470px;
+  padding-left: 60px;
+  margin-bottom: 37px;
+  list-style: none;
+}
+
+.adv__item {
+  position: relative;
+
+  margin-bottom: 12px;
+
+  @include normal;
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: -60px;
+    content: url('/src/img/icons/adv-arrow.svg');
+  }
+}
+
+.adv__text-block {
+  width: 100%;
+  max-width: 490px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 10px;
+
+  @include h4;
+  color: $yellow;
+
+  border: 2px solid #f39d4d;
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+  }
+}

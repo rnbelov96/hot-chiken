@@ -5,9 +5,14 @@
   padding-bottom: 60px;
 
   overflow-x: hidden;
+
+  @media (max-width: 991px) {
+    padding-bottom: 10px;
+  }
 }
 
 .desc__chiken-bg {
+  z-index: -1;
   position: absolute;
   right: 95px;
   top: -90px;
@@ -92,7 +97,7 @@
 
 .desc__bg {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   left: -40px;
   bottom: 20px
 }
