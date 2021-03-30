@@ -1,0 +1,35 @@
+@mixin bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin normal {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin h3 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+@mixin h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+@mixin h1 {
+  font-weight: 800;
+font-size: 80px;
+line-height: 80px;
+}

@@ -1,0 +1,35 @@
+.button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 66px;
+
+  @include h4;
+  color: white;
+
+  background: #da381e;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 0px 0px white;
+
+  &_form {
+    width: 100%;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-44%);
+    right: 20px;
+
+    content: url("/src/img/icons/pdf.svg");
+
+    @media (max-width: 575px) {
+      content: none;
+    }
+  }
+}
