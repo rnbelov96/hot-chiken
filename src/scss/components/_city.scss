@@ -1,0 +1,88 @@
+.city {
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  top: -170px;
+  margin-bottom: -170px;
+  min-height: 1000px;
+}
+
+.city__bg {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1640px;
+  height: 996px;
+}
+
+.city__title {
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 708px;
+  margin-top: 170px;
+
+  @include h1;
+
+  @media (max-width: 991px) {
+    margin-top: 200px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+.city__subtitle {
+  margin-bottom: 160px;
+
+  @include h2;
+
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+  }
+}
+
+.city__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.city__text {
+  position: relative;
+  top: -50px;
+
+  width: 100%;
+  max-width: 423px;
+
+  @include h2;
+  color: $red;
+
+  &::before {
+    position: absolute;
+    top: 62%;
+    transform: translateY(-50%);
+    right: -100px;
+
+    content: url("/src/img/icons/city-arrow.svg");
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
