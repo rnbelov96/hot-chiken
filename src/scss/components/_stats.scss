@@ -13,6 +13,10 @@
     padding-bottom: 75px;
     min-height: 750px;
   }
+
+  @media (max-width: 991px) {
+    padding-bottom: 120px;
+  }
 }
 
 .stats__bg {

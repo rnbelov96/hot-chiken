@@ -1,0 +1,148 @@
+.stock {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 1115px;
+
+  @media (max-width: 1200px) {
+   min-height: 1050px;
+  }
+
+  @media (max-width: 767px) {
+    top: 0;
+    margin-bottom: 0;
+    padding-bottom: 75px;
+    min-height: 750px;
+  }
+}
+
+.stock__bg {
+  position: absolute;
+  left: 50%;
+  transform: skewY(-8deg) translateX(-50%);
+  height: 845px;
+  width: 1920px;
+  background-color: #2c2c2c;
+  background-image: url('/src/img/chiken-logo-stats.png');
+  background-repeat: no-repeat;
+  background-position: 73% 22%;
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 767px) {
+    transform: translateX(-50%);
+    height: 100%;
+  }
+}
+
+.stock__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 160px;
+
+  @media (max-width: 1200px) {
+    margin-top: 55px;
+  }
+}
+
+.stock__logo {
+  margin-right: 60px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.stock__title {
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 806px;
+
+  @include h1;
+  text-transform: uppercase;
+
+  @media (max-width: 991px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 37px;
+    line-height: 65px;
+  }
+}
+
+.stock__subtitle {
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 521px;
+
+  @include h3;
+  color: $red;
+  
+  @media (max-width: 575px) {
+    font-size: 19px;
+  }
+}
+
+.stock__list {
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1100px) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: 767px) {
+    justify-content: flex-start;
+  }
+}
+
+.stock__item {
+  position: relative;
+
+  margin-bottom: 100px;
+
+  @include h4;
+
+  &:first-child {
+    width: 389px;
+  }
+
+  &:nth-child(2) {
+    width: 354px;
+  }
+
+  &:last-child {
+    width: 250px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -63px;
+
+    content: url('/src/img/icons/stock-arrow.svg');
+  }
+}
+
+.stock__text-box {
+  width: 100%;
+  max-width: 736px;
+  padding: 17px 25px;
+  margin-bottom: 0;
+  margin-top: -50px;
+
+  @include h3;
+
+  border-top: 2px solid #da381e;
+  border-left: 2px solid #da381e;
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
+}
