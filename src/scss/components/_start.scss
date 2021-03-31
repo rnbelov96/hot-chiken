@@ -1,0 +1,136 @@
+.start {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 952px;
+
+  background-color: black;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+    min-height: 750px;
+  }
+}
+
+.start__bg {
+  position: absolute;
+  left: 50%;
+  transform: skewY(-8deg) translateX(-50%);
+  height: 681px;
+  width: 1920px;
+  background: radial-gradient(
+    27.5% 53.3% at 58.85% 50.21%,
+    #da381e 0%,
+    #7a1100 100%
+  );
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 767px) {
+    transform: translateX(-50%);
+    height: 100%;
+  }
+}
+
+.start__title-box {
+  margin-bottom: 74px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+}
+
+.start__title {
+  width: 100%;
+  max-width: 505px;
+  margin-bottom: 0;
+  margin-right: 50px;
+
+  @include h1;
+  text-transform: uppercase;
+
+  @media (max-width: 1200px) {
+    font-size: 67px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 49px;
+  }
+
+  @media (max-width: 767px) {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 46px;
+  }
+}
+
+.start__subtitle {
+  width: 100%;
+  max-width: 505px;
+  padding: 20px;
+  padding-left: 30px;
+  margin-bottom: 0;
+
+  @include h3;
+
+  border: 2px solid #ffffff;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+}
+
+.start__list {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.start__item-column {
+  width: 346px;
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 767px) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.start__item {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.start__item-title {
+  margin-bottom: 10px;
+
+  @include h3;
+}
+
+.start__item-text {
+  @include normal;
+  color: $yellow;
+}
