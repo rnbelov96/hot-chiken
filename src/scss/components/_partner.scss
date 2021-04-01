@@ -1,0 +1,164 @@
+.partner {
+  position: relative;
+  z-index: -1;
+
+  padding-top: 70px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+}
+
+.partner__bg {
+  position: absolute;
+  right: 0;
+  top: -283px;
+
+  width: 591px;
+  height: 888px;
+
+  background-image: url("/src/img/chiken-logo-partner.png");
+
+  @media (max-width: 767px) {
+    top: -85px;
+  }
+
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
+.partner__title-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 10px;
+  }
+} 
+
+.partner__title {
+  position: relative;
+  top: -10px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  margin-left: 20px;
+
+  @include h1;
+  color: $yellow;
+
+  @media (max-width: 1300px) {
+    max-width: 611px;
+    font-size: 55px;
+  }
+
+  @media (max-width: 991px) {
+    max-width: 398px;
+    font-size: 36px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    line-height: 58px;
+    margin-left: 0;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+    line-height: 50px;
+  }
+}
+
+.partner__img {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.partner__text {
+  width: 100%;
+  max-width: 782px;
+  margin-bottom: 55px;
+
+  @include h2;
+
+  @media (max-width: 767px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.partner__list-caption {
+  margin-bottom: 120px;
+
+  @include h2;
+  color: $red;
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+    margin-bottom: 80px;
+  }
+}
+
+.partner__list {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+  display: flex;
+
+  @media (max-width: 575px) {
+    flex-wrap: wrap;
+  }
+}
+
+.partner__item {
+  position: relative;
+
+  width: 274px;
+  margin-right: 50px;
+  margin-bottom: 90px;
+
+  @include h4;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -70px;
+    content: url("/src/img/icons/partner-arrow.svg");
+  }
+
+  @media (max-width: 767px) {
+    margin-right: 20px;
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.partner__text-box {
+  width: 100%;
+  max-width: 736px;
+  padding: 20px;
+  margin-bottom: 0;
+  margin-top: -30px;
+
+  @include h3;
+  color: $red;
+
+  border-left: 2px solid #DA381E;
+  border-top: 2px solid #DA381E;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,123 @@
+.consult {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 950px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+    min-height: 750px;
+  }
+}
+
+.consult__bg {
+  position: absolute;
+  left: 50%;
+  transform: skewY(-8deg) translateX(-50%);
+  height: 681px;
+  width: 1920px;
+  background: radial-gradient(
+    27.5% 53.3% at 58.85% 50.21%,
+    #da381e 0%,
+    #7a1100 100%
+  );
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 767px) {
+    transform: translateX(-50%);
+    height: 100%;
+  }
+}
+
+.consult__title {
+  margin-bottom: 0;
+  margin-top: 155px;
+
+  @include h1;
+  text-transform: uppercase;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 32px;
+    line-height: 60px;
+  }
+}
+
+.consult__content {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.consult__text-box {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 465px;
+  min-height: 186px;
+  padding: 30px;
+  margin-bottom: 140px;
+
+  @include h3;
+  color: $yellow;
+
+  background-image: url('/src/img/icons/border-box.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  @media (max-width: 991px) {
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 100%;
+
+    background-image: none;
+    border: 2px solid $yellow;
+  }
+
+  @media (max-width: 575px) {
+    padding: 15px;
+    max-width: 100%;
+    min-height: auto;
+
+    font-size: 22px;
+  }
+}
+
+.consult__caption {
+  position: relative;
+  right: 20px;
+  margin-bottom: 0;
+
+  @include normal;
+  text-align: right;
+
+  &::before {
+    position: absolute;
+    top: -35px;
+    right: 0;
+
+    content: url('/src/img/icons/consult-arrow.svg');
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}

@@ -4,6 +4,10 @@
   @media (max-width: 991px) {
     padding-top: 30px;
   }
+
+  @media (max-width: 575px) {
+    padding-bottom: 0;
+  }
 }
 
 .brand__content {
@@ -168,6 +172,8 @@
   }
 
   @media (max-width: 575px) {
+    width: 100%;
+    margin-right: 0;
     margin-bottom: 93px;
   }
 }

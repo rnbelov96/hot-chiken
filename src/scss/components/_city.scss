@@ -15,6 +15,10 @@
 
   width: 1640px;
   height: 996px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 .city__title {

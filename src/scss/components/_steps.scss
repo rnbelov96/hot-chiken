@@ -1,0 +1,131 @@
+.steps {
+  position: relative;
+  overflow: hidden;
+  top: -180px;
+  margin-bottom: -180px;
+
+  min-height: 1130px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+    min-height: 750px;
+  }
+}
+
+.steps__bg {
+  position: absolute;
+  left: 50%;
+  transform: skewY(-8deg) translateX(-50%);
+  height: 860px;
+  width: 1920px;
+  background: #F39D4D;
+  background-repeat: no-repeat;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 1200px) {
+    height: 900px;
+  }
+
+  @media (max-width: 767px) {
+    transform: translateX(-50%);
+    height: 100%;
+  }
+}
+
+.steps__title {
+  margin-bottom: 0;
+  margin-top: 320px;
+
+  @include h1;
+  color: $grey;
+
+  @media (max-width: 1200px) {
+    margin-top: 200px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 155px;
+  }
+
+  @media (max-width: 575px) {
+    margin-top: 120px;
+    font-size: 47px;
+  }
+}
+
+.steps__subtitle {
+  width: 100%;
+  max-width: 682px;
+  margin-bottom: 77px;
+
+  @include h2;
+  color: $grey; 
+
+  @media (max-width: 1200px) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+  }
+}
+
+.steps__list {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1200px) {
+    justify-content: space-around;
+  }
+}
+
+.steps__item {
+  width: 220px;
+  margin-bottom: 20px;
+
+  @media (max-width: 1200px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &:nth-child(1) .steps__img-box {
+    background-image: url('/src/img/gallery/steps/1.jpg');
+  }
+  &:nth-child(2) .steps__img-box {
+    background-image: url('/src/img/gallery/steps/2.jpg');
+  }
+  &:nth-child(3) .steps__img-box {
+    background-image: url('/src/img/gallery/steps/3.jpg');
+  }
+  &:nth-child(4) .steps__img-box {
+    background-image: url('/src/img/gallery/steps/4.jpg');
+  }
+  &:nth-child(5) .steps__img-box {
+    background-image: url('/src/img/gallery/steps/5.jpg');
+  }
+}
+
+.steps__img-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 220px;
+  height: 220px;
+  padding: 20px;
+
+  @include h4;
+  margin-bottom: 0;
+
+  background-color: black;
+}
+
+.steps__item-text {
+  margin-bottom: 0;
+
+  @include normal;
+  color: $grey;
+}
