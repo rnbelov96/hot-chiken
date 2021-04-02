@@ -1,6 +1,17 @@
 /* eslint-disable no-param-reassign */
 export {};
 
+const modalFormInfoList = [
+  {
+    title: 'Оставить заявку на бесплатную консультацию',
+    button: 'Получить консультацию',
+  },
+  {
+    title: 'Оставьте заявку и получите подробный бизнес-план',
+    button: 'Получить подробный бизнес-план',
+  },
+];
+
 const closeModal = (modalEl: HTMLDivElement) => {
   modalEl.style.opacity = '0';
   modalEl.style.overflowY = 'inherit';
@@ -16,7 +27,11 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [policyModalEl, youtubeAdvModalEl] = modalElList;
+const [policyModalEl, formModalEl, youtubeAdvModalEl] = modalElList;
+
+const formTitleEl = formModalEl.querySelector('h2') as HTMLHeadingElement;
+const formBtnEl = formModalEl.querySelector('button') as HTMLButtonElement;
+
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
@@ -51,8 +66,26 @@ policyBtnElList.forEach(el => {
   });
 });
 
-const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
+const callbackBtnElList = document.querySelectorAll('.js-callback');
+const planBtnElList = document.querySelectorAll('.js-plan');
 
-youtubeAdvBtnCallEl.addEventListener('click', () => {
-  openModal(youtubeAdvModalEl as HTMLDivElement);
+callbackBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    formTitleEl.textContent = modalFormInfoList[0].title;
+    formBtnEl.textContent = modalFormInfoList[0].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
 });
+planBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    formTitleEl.textContent = modalFormInfoList[1].title;
+    formBtnEl.textContent = modalFormInfoList[1].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
+});
+
+// const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
+
+// youtubeAdvBtnCallEl.addEventListener('click', () => {
+//   openModal(youtubeAdvModalEl as HTMLDivElement);
+// });

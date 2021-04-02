@@ -1,30 +1,28 @@
 /* eslint-disable no-param-reassign */
 export {};
 
-const rangeElList = document.querySelectorAll('.js-range');
-
-const cellsRange = document.querySelector(
-  '.js-cells-range',
+const incomeRange = document.querySelector(
+  '.js-income-range',
 ) as HTMLInputElement;
 const pointsRange = document.querySelector(
   '.js-points-range',
-) as HTMLInputElement;
-const checkInput = document.querySelector(
-  '.js-check-input',
 ) as HTMLInputElement;
 
 const resultLabelElList = document.querySelectorAll('.js-calc-result');
 
 let result: number;
 
-let cellsCurrentStep = 2;
-let pointsCurrentStep = 2;
+let pointsCurrentStep = 1;
+let incomeCurrentStep = 1;
 
-const cellsEndpoints = [...document.querySelectorAll('.js-cells-endpoints .calc__endpoint')];
-const pointsEndpoints = [...document.querySelectorAll('.js-points-endpoints .calc__endpoint')];
+const pointsInputDots = [...document.querySelectorAll('.js-points-input-dots .calc__input-dot')];
+const pointsLabels = [...document.querySelectorAll('.js-points-labels .calc__label')];
+
+const incomeInputDots = [...document.querySelectorAll('.js-income-input-dots .calc__input-dot')];
+const incomeLabels = [...document.querySelectorAll('.js-income-labels .calc__label')];
 
 const calcResult = () => {
-  result = (Number(cellsRange.value) * Number(pointsRange.value) * Number(checkInput.value)) * 0.147;
+  result = (Number(incomeRange.value) * 100000 * Number(pointsRange.value)) * 0.0007;
   resultLabelElList.forEach(el => {
     el.textContent = result.toLocaleString();
   });
@@ -32,52 +30,30 @@ const calcResult = () => {
 
 calcResult();
 
-rangeElList.forEach(el => {
-  const rangeEl = el as HTMLInputElement;
-
-  const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
-
-  const currentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
-
-  rangeEl.style.background = `linear-gradient(to right, #EF7D30 0%, #EF7D30 ${String(
-    (currentStep / steps) * 100,
-  )}%, #f2f4f8 ${String((currentStep / steps) * 100)}%, #f2f4f8 100%)`;
-});
-
-cellsRange.addEventListener('input', e => {
-  const rangeEl = e.currentTarget as HTMLInputElement;
-
-  const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
-
-  cellsEndpoints[cellsCurrentStep].classList.remove('calc__endpoint_active');
-
-  cellsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
-
-  cellsEndpoints[cellsCurrentStep].classList.add('calc__endpoint_active');
-
-  rangeEl.style.background = `linear-gradient(to right, #EF7D30 0%, #EF7D30 ${String(
-    (cellsCurrentStep / steps) * 100,
-  )}%, #f2f4f8 ${String((cellsCurrentStep / steps) * 100)}%, #f2f4f8 100%)`;
-
-  calcResult();
-});
-
 pointsRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
-  const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
-
-  pointsEndpoints[pointsCurrentStep].classList.remove('calc__endpoint_active');
+  pointsInputDots[pointsCurrentStep].classList.remove('calc__input-dot_active');
+  pointsLabels[pointsCurrentStep].classList.remove('calc__label_active');
 
   pointsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  pointsEndpoints[pointsCurrentStep].classList.add('calc__endpoint_active');
-
-  rangeEl.style.background = `linear-gradient(to right, #EF7D30 0%, #EF7D30 ${String(
-    (pointsCurrentStep / steps) * 100,
-  )}%, #f2f4f8 ${String((pointsCurrentStep / steps) * 100)}%, #f2f4f8 100%)`;
+  pointsInputDots[pointsCurrentStep].classList.add('calc__input-dot_active');
+  pointsLabels[pointsCurrentStep].classList.add('calc__label_active');
 
   calcResult();
 });
 
-checkInput.addEventListener('input', calcResult);
+incomeRange.addEventListener('input', e => {
+  const rangeEl = e.currentTarget as HTMLInputElement;
+
+  incomeInputDots[incomeCurrentStep].classList.remove('calc__input-dot_active');
+  incomeLabels[incomeCurrentStep].classList.remove('calc__label_active');
+
+  incomeCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  incomeInputDots[incomeCurrentStep].classList.add('calc__input-dot_active');
+  incomeLabels[incomeCurrentStep].classList.add('calc__label_active');
+
+  calcResult();
+});

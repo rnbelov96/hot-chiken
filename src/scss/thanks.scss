@@ -5,6 +5,9 @@
 @import './base/global.scss';
 @import './components/modal.scss';
 @import './components/priv-policy.scss';
+@import './components/button.scss';
+@import './components/footer.scss';
+@import './components/header.scss';
 
 .thanks,
 .error {
@@ -12,7 +15,7 @@
   display: flex;
   flex-direction: column;
   &__body {
-    background-color: $grey;
+    background-color: black;
   }
   &__body,
   &__html {
@@ -21,9 +24,11 @@
   &__header {
     flex: 0 0 auto;
     padding-top: 20px;
+    padding-bottom: 30px;
+    overflow: hidden;
   }
   .container {
-    max-width: 1410px;
+    max-width: 1140px;
   }
   footer {
     flex: 0 0 auto;

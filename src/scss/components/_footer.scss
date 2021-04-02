@@ -1,5 +1,6 @@
 .footer {
   padding-bottom: 60px;
+  overflow: hidden;
 
   @media (max-width: 767px) {
     padding-top: 20px;
@@ -22,14 +23,31 @@
     margin-bottom: 20px;
     max-width: 100%;
   }
-  
 }
 
 .footer__phone-box {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.footer__phone-box-shadow {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #da381e 0%,
+    rgba(218, 56, 30, 0) 100%
+  );
+  opacity: 0.3;
 }
 
 .footer__phone {
@@ -39,7 +57,8 @@
   @include h3;
   color: white;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: white;
     text-decoration: underline;
   }

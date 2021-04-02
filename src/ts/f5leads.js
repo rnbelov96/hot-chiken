@@ -149,6 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (document.formData.name === undefined) document.formData.name = window.location.hostname;
 
+      console.log(document.formData);
+
       const data = JSON.stringify(document.formData);
 
       const response = await fetch(
@@ -175,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.f5leads.onSubmitSecondForm !== undefined) document.f5leads.onSubmitSecondForm(form);
       } else {
         localStorage.lastFirstFormData = JSON.stringify(document.formData);
-        if (document.f5leads.onSubmitFirstForm !== undefined) document.f5leads.onSubmitFirstForm(form);
+        // if (document.f5leads.onSubmitFirstForm !== undefined) document.f5leads.onSubmitFirstForm(form);
       }
     });
   });
