@@ -91,6 +91,35 @@
   }
 }
 
+.calc__result-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 110%;
+  justify-content: space-between;
+
+  @media (max-width: 575px) {
+    width: 100%;
+
+    & .calc__result-box:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+.calc__result-box {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 575px) {
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
 .calc__input-label {
   margin-bottom: 7px;
 
