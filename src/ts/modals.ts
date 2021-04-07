@@ -84,8 +84,7 @@ planBtnElList.forEach(btn => {
   });
 });
 
-// const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
-
-// youtubeAdvBtnCallEl.addEventListener('click', () => {
-//   openModal(youtubeAdvModalEl as HTMLDivElement);
-// });
+const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
+youtubeAdvBtnCallEl.addEventListener('click', () => {
+  openModal(youtubeAdvModalEl as HTMLDivElement);
+});

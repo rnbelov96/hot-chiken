@@ -27,12 +27,13 @@
   }
 }
 
-.brand__laptop-img {
+.brand__laptop-box {
   position: relative;
   left: -50px;
+  width: 125%;
 
   @media (max-width: 1200px) {
-    width: 60%;
+    width: 89%;
   }
 
   @media (max-width: 991px) {
@@ -40,6 +41,29 @@
     left: 0;
     width: 100%;
   }
+}
+
+.brand__laptop-btn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 53px;
+  height: 67px;
+
+  background-image: url('/src/img/icons/play.svg');
+  background-color: transparent;
+  border: 0px;
+  @include bg;
+
+  @media (max-width: 575px) {
+    top: 33%;
+  }
+}
+
+.brand__laptop-img {
+  width: 100%;
 }
 
 .brand__title-box {
