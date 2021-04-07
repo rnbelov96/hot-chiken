@@ -149,7 +149,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (document.formData.name === undefined) document.formData.name = window.location.hostname;
 
-      console.log(document.formData);
+      const bitrixData = {
+        email: document.formData.email,
+        phone: document.formData.phone,
+        city: document.formData.city,
+        name: document.formData.name,
+      };
+      let bitrixFormBody = [];
+      Object.keys(bitrixData).forEach(key => {
+        const encodedKey = encodeURIComponent(key);
+        const encodedValue = encodeURIComponent(bitrixData[key]);
+        bitrixFormBody.push(`${encodedKey}=${encodedValue}`);
+      });
+      bitrixFormBody = bitrixFormBody.join('&');
+      await fetch(
+        'bitrix/index.php',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+          },
+          body: bitrixFormBody,
+        },
+      );
 
       const data = JSON.stringify(document.formData);
 
@@ -177,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.f5leads.onSubmitSecondForm !== undefined) document.f5leads.onSubmitSecondForm(form);
       } else {
         localStorage.lastFirstFormData = JSON.stringify(document.formData);
-        // if (document.f5leads.onSubmitFirstForm !== undefined) document.f5leads.onSubmitFirstForm(form);
+        if (document.f5leads.onSubmitFirstForm !== undefined) document.f5leads.onSubmitFirstForm(form);
       }
     });
   });
