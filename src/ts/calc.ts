@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 export {};
 
-const investValues = ['550', '975', '1300'];
-const incomeValues = ['422 000', '527 500', '660 000'];
-const resultValues = ['60 000', '75 000', '95 000'];
+const investValues = ['550 000', '975 000', '1 400 000'];
+const incomeValues = ['429 000', '858 000', '1 287 000'];
+const resultValues = ['75 000', '150 000', '225 000'];
 
 const pointsRange = document.querySelector(
   '.js-points-range',
