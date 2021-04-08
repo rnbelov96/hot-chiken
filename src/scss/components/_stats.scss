@@ -97,10 +97,10 @@
   padding-top: 32px;
   padding-right: 64px;
   padding-left: 64px;
+  padding-bottom: 32px;
   margin-bottom: 62px;
 
-  border-top: 2px solid #da381e;
-  border-left: 2px solid #da381e;
+  border: 2px solid #da381e;
 
   list-style: none;
 
@@ -111,6 +111,11 @@
   @media (max-width: 767px) {
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -127,12 +132,21 @@
   @media (max-width: 767px) {
     width: 100%;
   }
+
+  @media (max-width: 575px) {
+    margin-bottom: 10px;
+  }
 }
 
 .stats__item-number {
   margin-bottom: 16px;
 
   @include h2;
+
+  @media (max-width: 575px) {
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
 }
 
 .stats__item-text {
@@ -141,4 +155,8 @@
   @include h4;
 
   color: $red;
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+  }
 }

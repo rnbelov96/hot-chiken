@@ -18,6 +18,11 @@
 
   &_consult {
     position: relative;
+
+    @media (max-width: 575px) {
+      width: 75%;
+    }
+    
     &::before {
       position: absolute;
       content: url('/src/img/owner.png');
@@ -26,7 +31,18 @@
       transform: skewY(0.5deg);
 
       @media (max-width: 1200px) {
-        content: none;
+        z-index: -1;
+        left: -345px;
+        bottom: -50px;
+        content: url('/src/img/owner-small.png');
+      }
+
+      @media (max-width: 767px) {
+        left: -277px;
+      }
+
+      @media (max-width: 575px) {
+        left: -189px;
       }
     }
   }
