@@ -264,4 +264,8 @@
   margin-bottom: 0;
 
   @include h2;
+
+  @media (max-width: 575px) {
+    font-size: 30px;
+  }
 }
