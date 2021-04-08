@@ -1,14 +1,58 @@
 .requisites {
   color: black;
+
+  @media (max-width: 575px) {
+    width: 98%;
+  }
 }
 
 .requisites__content {
   display: flex;
   align-items: center;
+
   background-color: white;
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+}
+
+.requisites__text-block {
+  margin-right: 30px;
+
+  @media (max-width: 575px) {
+    margin-right: 0;
+  }
 }
 
 .requisites__title {
   text-align: center;
   font-weight: bold;
+  font-size: 38px;
+}
+
+.requisites__text {
+  text-align: center;
+  font-size: 20px;
+}
+
+.requisites__social-box {
+  display: flex;
+  justify-content: center;
+}
+
+.requisites__social {
+  width: 30px;
+  height: 30px;
+
+  &:first-child {
+    background-image: url("/src/img/icons/insta-logo.png");
+    @include bg;
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    background-image: url('/src/img/icons/vk-logo.png');
+  }
 }

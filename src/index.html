@@ -124,9 +124,9 @@
               </li>
               <li class="desc__item">
                 <p class="desc__item-text">
-                  Для опытных <br />
-                  и начинающих <br />
-                  предпринимателей
+                  Стабильный бизнес <br />
+                  который несет Вам <br />
+                  "золотые яйца"
                 </p>
               </li>
             </ul>
@@ -782,11 +782,14 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
-          <img
-            src="./img/footer-logo.png"
-            alt="Логотип компании"
-            class="footer__logo"
-          />
+          <div class="footer__logo-box">
+            <img
+              src="./img/footer-logo.png"
+              alt="Логотип компании"
+              class="footer__logo"
+            />
+            <button type="button" class="footer__requisites js-requisites-call">Реквизиты компании</button>
+          </div>
           <div class="footer__phone-box">
             <div class="footer__phone-box-shadow"></div>
             <a href="tel:+" class="footer__phone">+7 (3412) 33-11-18</a
@@ -1115,7 +1118,7 @@
         <section class="requisites">
           <div class="requisites__content">
             <img
-              src="./img/chiken-logo-main.png"
+              src="./img/chiken-logo-modal.png"
               alt="Логотип компании"
               width="194"
               height="333"
@@ -1141,6 +1144,12 @@
               </div>
             </div>
           </div>
+          <button
+            data-modal-close=""
+            type="button"
+            class="modal__close"
+            title="Закрыть"
+          ></button>
         </section>
       </div>
     </div>
