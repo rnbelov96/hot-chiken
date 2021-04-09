@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Спасибо! Ваша заявка принята</title>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KS8CT4Z');
+    </script>
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
         m[i] =
@@ -34,8 +46,17 @@
     </script>
   </head>
   <body class="thanks__body">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KS8CT4Z"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
     <section class="thanks__header">
-        <div class="container">
+      <div class="container">
         <header class="header header_thanks">
           <div class="header__left-block">
             <img
@@ -49,11 +70,13 @@
           <div class="header__phone-box header__phone-box_thanks">
             <div class="header__phone-box-shadow"></div>
             <a href="tel:+" class="header__phone">+7 (3412) 33-11-18</a
-            ><button class="header__callback js-callback">обратный звонок</button>
+            ><button class="header__callback js-callback">
+              обратный звонок
+            </button>
           </div>
         </header>
       </div>
-      </section>
+    </section>
     <section class="thanks">
       <div class="thanks__content">
         <div class="container">
@@ -362,6 +385,13 @@
       </div>
     </div>
 
-    <noscript><div><img src="https://mc.yandex.ru/watch/75349576" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/75349576"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
   </body>
 </html>
