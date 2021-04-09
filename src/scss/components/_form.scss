@@ -20,9 +20,28 @@
     position: relative;
 
     @media (max-width: 575px) {
-      width: 75%;
+      max-width: 400px;
     }
-    
+
+    @media (max-width: 1200px) {
+      &::after {
+        position: absolute;
+        top: 0px;
+        left: -200px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        content: 'Антон Киселёв\0aоснователь «Hot Chicken»';
+        white-space: pre;
+        text-align: right;
+        display: flex;
+
+        @media (max-width: 575px) {
+          content: none;
+        }
+      }
+    }
+
     &::before {
       position: absolute;
       content: url('/src/img/owner.png');
@@ -42,7 +61,7 @@
       }
 
       @media (max-width: 575px) {
-        left: -189px;
+        content: none;
       }
     }
   }

@@ -74,6 +74,10 @@
   @media (max-width: 991px) {
     align-items: flex-end;
   }
+
+  @media (max-width: 575px) {
+    align-items: center;
+  }
 }
 
 .consult__text-box {
@@ -132,5 +136,26 @@
 
   @media (max-width: 1200px) {
     display: none;
+  }
+}
+
+.consult__owner-img {
+  display: none;
+
+  @media (max-width: 575px) {
+    display: block;
+    width: 90%;
+    position: relative;
+    left: 12%;
+  }
+}
+
+.consult__owner-caption {
+  display: none;
+  text-align: right;
+
+  @media (max-width: 575px) {
+    display: block;
+    width: 100%;
   }
 }
