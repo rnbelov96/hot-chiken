@@ -45,14 +45,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
       filename: 'index.html',
-      chunks: ['main', 'libs']
-      // favicon: './src/img/icons/favicon.ico'
+      chunks: ['main', 'libs'],
+      favicon: './src/img/icons/favicon.ico'
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/thanks.html'),
       filename: 'thanks.html',
-      chunks: ['thanks']
-      // favicon: './src/img/icons/favicon.ico'
+      chunks: ['thanks'],
+      favicon: './src/img/icons/favicon.ico'
     }),
   ],
 }
