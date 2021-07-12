@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 export {};
 
-const investValues = ['550 000', '975 000', '1 400 000'];
+const investValues = ['600 000', '1 075 000', '1 550 000'];
 const incomeValues = ['429 000', '858 000', '1 287 000'];
 const resultValues = ['75 000', '150 000', '225 000'];
 
